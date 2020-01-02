@@ -153,7 +153,7 @@ section#about {
 }
 
 .about-card_text {
-  margin-top: 20px;
+  margin-top: 18px;
   color: #1D242B;
   font-size: 18px;
   line-height: 24px;
@@ -170,7 +170,7 @@ section#about {
 
 .about-skills_header {
   color: #1D242B;
-  font-size: 72px;
+  font-size: 64px;
   font-family: 'Poppins', serif;
   font-weight: bold;
 }
@@ -184,17 +184,17 @@ section#about {
 }
 
 .griditem-header {
-  font-size: 24px;
+  font-size: 21px;
   font-weight: bold;
 }
 
 .griditem-content {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
 }
 
 section#projects {
-  margin-top: 175px;
+  margin-top: 125px;
 }
 
 .container__projects {
@@ -255,7 +255,7 @@ section#projects {
 }
 
 section#contact {
-  margin-top: 175px;
+  margin-top: 125px;
 }
 
 .container__contact {
@@ -325,7 +325,7 @@ section#contact {
 }
 
 section#footer {
-  margin-top: 150px;
+  margin-top: 125px;
 }
 
 @keyframes slide {
