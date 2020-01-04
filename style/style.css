@@ -858,6 +858,19 @@ section#footer {
     margin-top: 12px;
   }
 
+  .hero-icon {
+    width: 25px;
+  }
+
+  .hero-icon__arrow {
+    width: 20px;
+  }
+
+  .hero-link {
+    padding: 5px 14px;
+    font-size: 12px;
+  }
+
   .hero-subheader {
     font-size: 13px;
     line-height: 20px;
