@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Juan Carlos Muñoz</title>
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style/style.css">
 </head>
@@ -15,26 +16,25 @@
       <nav>
         <div class="nav-left">Juan Carlos Muñoz</div>
         <ul class="nav-right nav-right__links">
-          <li class="nav-link">About</li>
-          <li class="nav-link">Projects</li>
-          <li class="nav-link">Contact</udiv>
+          <li class="nav-link"><a href="#about">About</a></li>
+          <li class="nav-link"><a href="#projects">Projects</a></li>
+          <li class="nav-link"><a href="#contact">Contact</a></div>
         </ul>
       </nav>
     </div>
     <div class="container container__hero">
-      <div data-tilt data-tilt-scale="1.02" data-tilt-reverse="true" data-tilt-glare data-tilt-max-glare="0.5">
-        <div id="inner">
+      <div data-tilt data-tilt-reverse="true" data-tilt-glare data-tilt-max-glare="0.5">
           <h1 class="hero-header">Hi, I'm Juan Carlos 👋</h1>
-        </div>
       </div>
       <div id="text-container">
-        <p class="hero-subheader">I'm a full-stack web developer. Check out my <a href="#">work</a> below!</p>
+        <p class="hero-subheader">I'm a full-stack developer. Check out my <a class="hero-subheader__link" href="#projects">work</a> below!</p>
         <div class="hero-icons">
-          <img class="hero-icon" src="/img/github.svg">
-          <img class="hero-icon" src="/img/linkedin.svg">
+          <a href="#contact" class="hero-link">Contact Me</a>
+          <a href="https://github.com/onecarlosmunoz"><img class="hero-icon" src="/img/github.svg"></a>  
+          <a href="https://www.linkedin.com/in/munozjuancarlos/"><img class="hero-icon" src="/img/linkedin.svg"></a>
         </div>
       </div>
-      <img class="hero-icon hero-icon__arrow" src="/img/downarrow.svg" alt="">
+      <a class="hero-icon hero-icon__arrow" href="#about"><img src="/img/downarrow.svg" alt=""></a>
     </div>
   </section> 
 
@@ -43,9 +43,8 @@
       <div class="about-card">
         <div class="about-card_header">a bit about me</div>
         <div class="about-card_text">I’m a Manila-based developer who loves exploring the intersection
-        of code & design. I enjoy minimal design and pizza among all things. Currently looking for an opportunity to work
-        full-time as a Web Developer.</div>
-        <div class="about-card_text about-card_text__download">Download my resume</div>
+        of code & design. I also like minimal design and pizza! Currently looking for freelance work as well as a full-time Web Developer gig.</div>
+        <div class="about-card_text about-card_text__download">Download resume</div>
       </div>
       <div class="about-skills">
         <div class="about-skills_header">the sum:</div>
@@ -113,22 +112,22 @@
         <div class="contact-header">say hi!</div>
         <a href="mailto:onecarlosmunoz@gmail.com" class="contact-email">onecarlosmunoz@<br>gmail.com</a>
         <div class="contact-border"></div>
-        <div class="contact-content contact-content__spaced">Interested in working on a project together? Need a developer in your team? Say hi!</div>
+        <div class="contact-content contact-content__spaced">Interested in working on a project together? Need a developer on your team? Say hi!</div>
         <div class="contact-content">Juan Carlos T. Muñoz</div>
         <div class="contact-content">Quezon City, Philippines</div>
         <div class="contact-content">+63 977 428 7477</div>
         <div class="contact-icons">
-          <img class="contact-icon" src="/img/github-white.svg">
-          <img class="contact-icon" src="/img/linkedin-white.svg">
+          <a href="https://github.com/onecarlosmunoz"><img class="contact-icon" src="/img/github-white.svg"></a>
+          <a href="https://www.linkedin.com/in/munozjuancarlos/"><img class="contact-icon" src="/img/linkedin-white.svg"></a>
         </div>
       </div>
       <img class="contact-image" src="/img/portrait.jpg">
     </div>
   </section>
-
+<!-- 
   <section id="footer">
     tite hehehe
-  </section>
+  </section> -->
   <script src="/js/main.js"></script>
   <script src="/js/vanilla-tilt.js"></script>
 </body>
