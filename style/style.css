@@ -247,7 +247,7 @@ section#projects {
 }
 
 .break-subheader {
-  margin-top: 5px;
+  margin-top: 0px;
   font-size: 20px;
   opacity: 80%;
   text-decoration: underline;
@@ -284,6 +284,7 @@ section#projects {
 }
 
 .project-link {
+  opacity: 0.8;
   margin-right: 15px;
   text-decoration: underline;
 }
@@ -789,7 +790,7 @@ section#footer {
   }
 
   .break-header {
-    line-height: 32px;
+    /* line-height: 32px; */
   }
 
   .hero-subheader {
@@ -930,12 +931,23 @@ section#footer {
 
   .projects-grid {
     gap: 40px 20px;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     margin-top: 30px;
   }
 
   .project-header {
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .project-content {
+    font-size: 14px;
+    margin: 8px 0px;
+  }
+
+  .project-link {
+    font-size: 14px;
+    margin-right: 10px;
   }
 
   .container__contact {
@@ -985,7 +997,7 @@ section#footer {
   }
 
   .container__hero {
-    padding: 40px 20px;
+    padding: 60px 20px 40px 20px;
   }
 
   .container__about {
@@ -1018,7 +1030,80 @@ section#footer {
     font-size: 14px;
   }
 
+  .about-card_text {
+    font-size: 12px;
+  }
+
+  .about-skills {
+    padding-top: 20px;
+  }
+
+  .about-skills_grid {
+    gap: 15px 15px;
+  }
+
+  .about-skills_header {
+    font-size: 28px;
+  }
+
+  .griditem-header, .griditem-content {
+    font-size: 12px;
+  }
+
+  .break-header {
+    font-size: 16px;
+    /* margin-right: 70px; */
+  }
+
+  .break-subheader {
+    font-size: 12px;
+  }
+
+  section#projects {
+    padding-top: 35px;
+  }
+
+  .projects-grid {
+    gap: 25px 15px;
+  }
+
+  .project-header {
+    font-size: 16px;
+  }
+
+  .project-content {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+  
+  .project-link {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  section#contact {
+    padding-top: 30px;
+  }
+
   .contact-left {
     padding: 25px 20px;
+  }
+
+  .contact-header {
+    font-size: 36px;
+  }
+
+  .contact-content {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
