@@ -1,6 +1,8 @@
-var cacheName = 'onecarlosmunoz';
+'use strict';
 
-var filesToCache = [
+const CACHE_NAME = 'onecarlosmunoz-v1';
+
+const FILES_TO_CACHE = [
   '/',
   '/img/barker.png',
   '/img/downarrow.svg',
@@ -12,9 +14,9 @@ var filesToCache = [
   '/img/pizza-smol.svg',
   '/img/pizza-smoler-dark.svg',
   '/img/pizza-smoler.svg',
-  '/img/portrait.png',
+  '/img/portrait.jpg',
   '/index.html',
-  '/css/style.css',
+  '/style/style.css',
   '/js/main.js',
   '/js/vanilla-tilt.js'
 ];
@@ -22,8 +24,8 @@ var filesToCache = [
 /* Start the service worker and cache all of the app's content */
 self.addEventListener('install', function (e) {
   e.waitUntil(
-    caches.open(cacheName).then(function (cache) {
-      return cache.addAll(filesToCache);
+    caches.open(CACHE_NAME).then(function (cache) {
+      return cache.addAll(FILES_TO_CACHE);
     })
   );
 });
