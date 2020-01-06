@@ -102,7 +102,9 @@ section#hero {
 }
 
 .hero-subheader__link {
-  color: rgba(29, 36, 43, .80);
+  /* color: rgba(29, 36, 43, .80); */
+  text-decoration: underline;
+  color: default;
 }
 
 .hero-icons {
@@ -133,7 +135,7 @@ section#hero {
 
 .hero-icon__arrow {
   margin-top: 175px;
-  animation: yourAnimation 2s infinite 0s ease;
+  animation: arrowDown 2s infinite 0s ease;
   cursor: pointer;
 }
 
@@ -156,17 +158,18 @@ section#about {
 }
 
 .about-card {
+  --box-shadow-color: #0077C0;
   background-color: #fff;
   padding: 60px 60px;
   max-width: 380px;
-  box-shadow: -10px 0px 0px #0077C0;
+  box-shadow: -10px 0px 0px var(--box-shadow-color);
   transition: 0.2s ease;
   height: 100%;
 }
 
 .about-card:hover {
   transform: translate(5px, -5px);
-  box-shadow: -15px 15px 0px #0077C0;
+  box-shadow: -15px 15px 0px var(--box-shadow-color);
   transition: 0.2s ease;
 }
 
@@ -290,8 +293,8 @@ section#projects {
 }
 
 section#contact {
-  padding-top: 125px;
-  padding-bottom: 125px;
+  margin-top: 125px;
+  margin-bottom: 125px;
 }
 
 .container__contact {
@@ -381,7 +384,7 @@ section#footer {
   }
 }
 
-@keyframes yourAnimation {
+@keyframes arrowDown {
   0% {
     transform: rotate(0) translateY(-50px);
     opacity: 0;
@@ -631,7 +634,7 @@ section#footer {
 
   .hero-icon__arrow {
     margin-top: 120px;
-    animation: yourAnimation 2s infinite 0s ease;
+    animation: arrowDown 2s infinite 0s ease;
     cursor: pointer;
   }
 
@@ -743,8 +746,8 @@ section#footer {
   }
 
   section#contact {
-    padding-top: 75px;
-    padding-bottom: 0px;
+    margin-top: 75px;
+    margin-bottom: 0px;
   }
 
   .container__contact {
@@ -824,7 +827,7 @@ section#footer {
   }
 
   section#contact {
-    padding-top: 45px;
+    margin-top: 45px;
   }
 
   .container__contact {
@@ -884,13 +887,13 @@ section#footer {
 
   .about-card {
     padding: 20px;
-    box-shadow: -10px 10px 0px #0077C0;
+    box-shadow: -10px 10px 0px var(--box-shadow-color);
     transform: translate(5px, -5px);
   }
 
   .about-card:hover {
     transform: translate(5px, -5px);
-    box-shadow: -10px 10px 0px #0077C0;
+    box-shadow: -10px 10px 0px var(--box-shadow-color);
     transition: 0.2s ease;
   }
 
@@ -1086,7 +1089,7 @@ section#footer {
   }
 
   section#contact {
-    padding-top: 30px;
+    margin-top: 30px;
   }
 
   .contact-left {
@@ -1105,5 +1108,123 @@ section#footer {
 @media only screen and (max-width: 300px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-height: 600px) and (min-width: 700px) and (orientation: landscape) {
+  section#hero {
+    height: auto;
+  }
+
+  .container__hero {
+    padding: 110px 80px;
+  }
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+
+  body {
+    /* background-color: #1B1F26; */
+    background-color: #091426;
+    color: #eee;
+  }
+
+  .nav-left {
+    color: #eee;
+  }
+
+  .nav-link a {
+    color: #eee;
+  }
+
+  .hero-header {
+    color: #eee;
+    /* opacity: 87%; */
+  }
+
+  .hero-subheader {
+    color: #eee;
+    opacity: 87%;
+  }
+
+  .hero-subheader__link {
+    color: #A2E8DD;
+  }
+
+  .hero-link {
+    color: #A2E8DD;
+    border-color: #A2E8DD;
+  }
+
+  .hero-icon {
+    filter: invert(0.9);
+  }
+
+  .hero-icon__arrow {
+    fill: #eee;
+  }
+
+  section#about {
+    background-color: #0A182D;     
+    background-image: url(/img/pizza-smoler-dark.svg), url(/img/pizza-smol-dark.svg);
+  }
+
+  .about-card {
+    background-color: #0E203F;
+    --box-shadow-color: #A2E8DD;
+  }
+
+  .about-card:hover {
+    transform: translate(5px, -5px);
+    --box-shadow-color: #A2E8DD;
+  }
+
+  .about-card_header {
+    color: #eee;
+  }
+
+  .about-card_text {
+    color: #eee;
+    opacity: 87%;
+  }
+
+  .about-card_text__download {
+    opacity: 60%;
+  }
+
+  .about-skills_header {
+    color: #eee;
+  }
+
+  .griditem-header, .griditem-content {
+    color: #eee;
+    opacity: 87%;
+  }
+
+  .break-subheader {
+    color: #A2E8DD;
+    opacity: 87%;
+  }
+
+  .project-header {
+    /* color: #A2E8DD; */
+  }
+
+  .project-content {
+    opacity: 87%;
+  }
+
+  .project-link {
+    opacity: 87%;
+    color: #A2E8DD;
+  }
+
+  .contact-left {
+    background-color: #0C1C35;
+  }
+
+  .contact-border {
+    border-color: #A2E8DD;
   }
 }
