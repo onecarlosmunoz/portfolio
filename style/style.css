@@ -1157,6 +1157,11 @@ section#footer {
     border-color: #A2E8DD;
   }
 
+  .hero-link:hover {
+    color: #091426;
+    background-color: #A2E8DD;
+  }
+
   .hero-icon {
     filter: invert(0.9);
   }
@@ -1190,7 +1195,8 @@ section#footer {
   }
 
   .about-card_text__download {
-    opacity: 60%;
+    color: #A2E8DD;
+    opacity: 87%;
   }
 
   .about-skills_header {
@@ -1207,8 +1213,26 @@ section#footer {
     opacity: 87%;
   }
 
-  .project-header {
-    /* color: #A2E8DD; */
+  .image__filter {
+    display: inline-block;
+    background-color: rgb(162, 232, 221, 0.2);
+    transition: 0.2s ease;
+    font-size: 0;
+  }
+
+  .image__filter:hover {
+    transition: 0.2s ease;
+    background-color: rgb(162, 232, 221, 0);
+  }
+
+  .project-image, .contact-image {
+    position: relative;
+    z-index: -1;
+    opacity: 1;
+  }
+
+  .project-image:hover, .contact-image:hover {
+    position: inherit;
   }
 
   .project-content {
@@ -1217,14 +1241,23 @@ section#footer {
 
   .project-link {
     opacity: 87%;
-    color: #A2E8DD;
+    color: #a2e8dd;
   }
 
   .contact-left {
     background-color: #0C1C35;
   }
 
+  .contact-email {
+    opacity: 87%;
+  }
+
+  .contact-content {
+    opacity: 87%;
+  }
+
   .contact-border {
     border-color: #A2E8DD;
   }
+  
 }
