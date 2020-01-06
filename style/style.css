@@ -365,7 +365,7 @@ section#contact {
   width: 30px;
   height: auto;
   margin-right: 10px;
-  fill: #fafafa;
+  filter: invert(93%);
 }
 
 section#footer {
@@ -1261,6 +1261,6 @@ section#footer {
   }
   
   .contact-icon {
-    filter: invert(7%) sepia(19%) saturate(588%) hue-rotate(103deg) brightness(97%) contrast(87%);
+    filter: invert(93%) sepia(19%) saturate(588%) hue-rotate(103deg) brightness(97%) contrast(87%);
   }
 }
