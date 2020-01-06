@@ -1163,7 +1163,7 @@ section#footer {
   }
 
   .hero-icon {
-    filter: invert(0.9);
+    filter: invert(93%) sepia(19%) saturate(588%) hue-rotate(103deg) brightness(97%) contrast(87%);
   }
 
   .hero-icon__arrow {
@@ -1260,4 +1260,7 @@ section#footer {
     border-color: #A2E8DD;
   }
   
+  .contact-icon {
+    filter: invert(7%) sepia(19%) saturate(588%) hue-rotate(103deg) brightness(97%) contrast(87%);
+  }
 }
