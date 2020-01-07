@@ -11,8 +11,8 @@ html {
 
 body {
   font-family: 'Rubik', sans-serif;
-  background-color: #fff;
-  color: #1D242B;
+  background-color: #091426;
+  color: #d2e3ff;
   height: 100%;
 }
 
@@ -22,7 +22,7 @@ li {
 
 nav {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   font-size: 16px;
   padding-top: 80px;
@@ -50,10 +50,8 @@ section#hero {
   padding: 0px 80px;
 }
 
-.nav-left {
-  font-weight: 400;
-  font-size: 18px;
-  color: #1D242B;
+.nav-left img {
+  width: 45px;
 }
 
 .nav-right {
@@ -62,7 +60,7 @@ section#hero {
 
 .nav-link a {
   margin-left: 25px;
-  color: #1D242B;
+  color: #AFC7EA;
 }
 
 .container__hero {
@@ -94,15 +92,17 @@ section#hero {
   font-size: 72px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
+  color: #d2e3ff;
 }
 
 .hero-subheader {
   font-size: 28px;
   color: rgba(29, 36, 43, .80);
+  color: #a5b8d4;
 }
 
 .hero-subheader__link {
-  /* color: rgba(29, 36, 43, .80); */
+  color: #a5b8d4;
   text-decoration: underline;
   color: default;
 }
@@ -114,23 +114,33 @@ section#hero {
 }
 
 .hero-link {
-  border: 2px solid #1d242b;
+  border: 2px solid #66FCF1;
   border-radius: 15px;
   padding: 10px 20px;
   margin: 0px 6px;
   transition: 0.2s ease;
-  color: #1D242B;
+  color: #66FCF1;
+  opacity: 87%;
 }
 
 .hero-link:hover {
-  color: #fafafa;
-  background-color: #1d242b;
+  color: #66FCF1;
+  background-color: #0d182b;
+  opacity: 100%;
 }
 
 .hero-icon {
-  width: 40px;
+  width: 48px;
   height: auto;
   margin: 0px 6px;
+  opacity: 87%;
+  transition: 0.2s ease;
+  filter: invert(86%) sepia(45%) saturate(511%) hue-rotate(105deg) brightness(103%) contrast(98%);
+}
+
+.hero-icon:hover {
+  opacity: 100%;
+  transition: 0.2s ease;
 }
 
 .hero-icon__arrow {
@@ -142,8 +152,9 @@ section#hero {
 section#about {
   display: flex;
   position: relative;
-  background-color: #C7EEFF;
-  background-image: url(/img/pizza-smoler.svg), url(/img/pizza-smol.svg);
+  background-color: rgb(9, 23, 43);
+  background-image: url(/img/pizza-smoler-dark.svg),
+  url(/img/pizza-smol-dark.svg);
   background-size: 120px 120px;
   background-position: 0 0, 80px 150px;
   animation: slide 4s infinite linear;
@@ -158,8 +169,8 @@ section#about {
 }
 
 .about-card {
-  --box-shadow-color: #0077C0;
-  background-color: #fff;
+  --box-shadow-color: #66FCF1;
+  background-color: #0E203F;
   padding: 60px 60px;
   max-width: 380px;
   box-shadow: -10px 0px 0px var(--box-shadow-color);
@@ -168,13 +179,14 @@ section#about {
 }
 
 .about-card:hover {
+  --box-shadow-color: #66FCF1;
   transform: translate(5px, -5px);
   box-shadow: -15px 15px 0px var(--box-shadow-color);
   transition: 0.2s ease;
 }
 
 .about-card_header {
-  color: #1D242B;
+  color: #d2e3ff;
   font-size: 48px;
   font-family: 'Poppins', serif;
   font-weight: bold;
@@ -184,14 +196,16 @@ section#about {
 
 .about-card_text {
   margin-top: 18px;
-  color: #1D242B;
+  color: #bdceeb;
   font-size: 18px;
   line-height: 24px;
+  opacity: 87%;
 }
 
 .about-card_text__download {
   text-decoration: underline;
-  opacity: 80%;
+  color: #66FCF1;
+  opacity: 87%;
 }
 
 .about-skills {
@@ -200,7 +214,7 @@ section#about {
 
 .about-skills_header {
   display: inline-block;
-  color: #1D242B;
+  color: #bdceeb;
   line-height: 48px;
   font-size: 64px;
   font-family: 'Poppins', serif;
@@ -230,6 +244,12 @@ section#about {
   line-height: 24px;
 }
 
+.griditem-header,
+.griditem-content {
+  color: #bdceeb;
+  opacity: 87%;
+}
+
 section#projects {
   padding-top: 125px;
 }
@@ -255,6 +275,7 @@ section#projects {
   opacity: 80%;
   text-decoration: underline;
   text-align: center;
+  color: #66FCF1;
 }
 
 .projects-grid {
@@ -267,6 +288,29 @@ section#projects {
 .project-image {
   width: 100%;
   height: auto;
+}
+
+.image__filter {
+  display: inline-block;
+  background-color: rgba(82, 229, 219, 0.15);
+  transition: 0.2s ease;
+}
+
+.image__filter:hover {
+  transition: 0.2s ease;
+  background-color: rgba(82, 229, 219, 0);
+}
+
+.project-image,
+.contact-image {
+  position: relative;
+  z-index: -1;
+  opacity: 1;
+}
+
+.project-image:hover,
+.contact-image:hover {
+  position: inherit;
 }
 
 .project-header {
@@ -290,11 +334,14 @@ section#projects {
   opacity: 0.8;
   margin-right: 15px;
   text-decoration: underline;
+  color: #66FCF1;
 }
 
 section#contact {
   margin-top: 125px;
+  /* padding: 80px 0px; */
   margin-bottom: 125px;
+  /* background-color: #0077C0; */
 }
 
 .container__contact {
@@ -305,7 +352,7 @@ section#contact {
 }
 
 .contact-left {
-  background-color: #0077C0;
+  background-color: #0C1C35;
   padding: 40px 20px 40px 60px;
 }
 
@@ -313,12 +360,12 @@ section#contact {
   font-family: 'Poppins', serif;
   font-size: 72px;
   font-weight: bold;
-  color: #fafafa;
   margin-bottom: 20px;
 }
 
 .contact-email {
-  color: #fafafa;
+  opacity: 87%;
+  color: #a5b8d4;
   font-size: 24px;
   margin: 5px 0px;
   text-decoration: none;
@@ -331,13 +378,14 @@ section#contact {
 .contact-border {
   width: 60px;
   margin: 50px 0px;
-  border-bottom: 3px solid #fafafa;
+  border-bottom: 3px solid #66FCF1;
 }
 
 .contact-content {
   font-size: 16px;
-  color: #fafafa;
   line-height: 24px;
+  opacity: 87%;
+  color: #a5b8d4;
 }
 
 .contact-content__spaced {
@@ -365,7 +413,14 @@ section#contact {
   width: 30px;
   height: auto;
   margin-right: 10px;
-  filter: invert(93%);
+  filter: invert(86%) sepia(45%) saturate(511%) hue-rotate(105deg) brightness(103%) contrast(98%);
+  opacity: 87%;
+  transition: 0.2s ease;
+}
+
+.contact-icon:hover {
+  opacity: 100%;
+  transition: 0.2s ease;
 }
 
 section#footer {
@@ -463,7 +518,6 @@ section#footer {
   }
 
   .contact-left {
-    background-color: #0077C0;
     padding: 30px 50px 30px 30px;
   }
 
@@ -505,17 +559,6 @@ section#footer {
 
   .hero-subheader {
     font-size: 24px;
-    color: rgba(29, 36, 43, .80);
-  }
-
-  .hero-link {
-    margin-left: 0px;
-    margin-right: 12px;
-    }
-
-  .hero-icon {
-    margin-left: 0px;
-    margin-right: 12px;
   }
 
   .about-card {
@@ -598,7 +641,6 @@ section#footer {
   }
 
   .contact-left {
-    background-color: #0077C0;
     padding: 30px 40px 40px 40px;
   }
 
@@ -613,8 +655,8 @@ section#footer {
 
 @media only screen and (max-width: 700px) {
 
-  .nav-left {
-    font-size: 16px;
+  .nav-left img {
+    width: 40px;
   }
 
   .nav-link {
@@ -653,11 +695,13 @@ section#footer {
   }
 
   .hero-icon {
-    margin-right: 6px;
+    margin-left: 0px;
+    margin-right: 12px;
   }
 
   .hero-link {
-    margin-right: 6px;
+    margin-left: 0px;
+    margin-right: 12px;
   }
 
   #text-container {
@@ -792,10 +836,6 @@ section#footer {
     margin-bottom: 6px;
   }
 
-  .break-header {
-    /* line-height: 32px; */
-  }
-
   .hero-subheader {
     font-size: 17px;
     line-height: 20px;
@@ -840,8 +880,8 @@ section#footer {
 }
 
 @media only screen and (max-width: 500px) {
-  .nav-left {
-    font-size: 14px;
+  .nav-left img {
+    width: 35px;
   }
 
   .nav-link {
@@ -864,6 +904,7 @@ section#footer {
 
   .hero-icon {
     width: 25px;
+    margin-right: 8px;
   }
 
   .hero-icon__arrow {
@@ -873,6 +914,7 @@ section#footer {
   .hero-link {
     padding: 5px 14px;
     font-size: 12px;
+    margin-right: 8px;
   }
 
   .hero-subheader {
@@ -986,8 +1028,8 @@ section#footer {
 }
 
 @media only screen and (max-width: 400px) {
-  .nav-left {
-    font-size: 12px;
+  .nav-left img {
+    width: 30px;
   }
 
   .nav-link a {
@@ -1127,121 +1169,115 @@ section#footer {
   body {
     /* background-color: #1B1F26; */
     background-color: #091426;
-    color: #eee;
+    color: #d2e3ff;
   }
 
-  .nav-left {
-    color: #eee;
+  nav {
+    opacity: 100;
   }
 
   .nav-link a {
-    color: #eee;
+    color: #AFC7EA;
   }
 
   .hero-header {
-    color: #eee;
+    color: #d2e3ff;
     /* opacity: 87%; */
   }
 
   .hero-subheader {
-    color: #eee;
-    opacity: 87%;
+    color: #a5b8d4;
+    /* opacity: 87%; */
   }
 
   .hero-subheader__link {
-    color: #A2E8DD;
+    color: #a5b8d4;
+    /* color: #9fb4d3; */
   }
 
   .hero-link {
-    color: #A2E8DD;
-    border-color: #A2E8DD;
+    color: #66FCF1;
+    border-color: #66FCF1;
+    opacity: 87%;
   }
 
   .hero-link:hover {
-    color: #091426;
-    background-color: #A2E8DD;
+    color: #66FCF1;
+    background-color: #0d182b;
+    opacity: 100%;
   }
 
   .hero-icon {
-    filter: invert(93%) sepia(19%) saturate(588%) hue-rotate(103deg) brightness(97%) contrast(87%);
+    filter: invert(86%) sepia(45%) saturate(511%) hue-rotate(105deg) brightness(103%) contrast(98%);
+    opacity: 87%;
+    transition: 0.2s ease;
   }
 
-  .hero-icon__arrow {
-    fill: #eee;
+  .hero-icon:hover {
+    opacity: 100%;
+    transition: 0.2s ease;
   }
 
   section#about {
-    background-color: #0A182D;     
+    background-color: rgb(9, 23, 43);     
     background-image: url(/img/pizza-smoler-dark.svg), url(/img/pizza-smol-dark.svg);
   }
 
   .about-card {
     background-color: #0E203F;
-    --box-shadow-color: #A2E8DD;
+    --box-shadow-color: #66FCF1;
   }
 
   .about-card:hover {
     transform: translate(5px, -5px);
-    --box-shadow-color: #A2E8DD;
+    --box-shadow-color: #66FCF1;
   }
 
   .about-card_header {
-    color: #eee;
+    color: #d2e3ff;
   }
 
   .about-card_text {
-    color: #eee;
+    color: #bdceeb;
     opacity: 87%;
   }
 
   .about-card_text__download {
-    color: #A2E8DD;
+    color: #66FCF1;
     opacity: 87%;
   }
 
   .about-skills_header {
-    color: #eee;
+    color: #bdceeb;
   }
 
   .griditem-header, .griditem-content {
-    color: #eee;
+    color: #bdceeb;
     opacity: 87%;
   }
 
   .break-subheader {
-    color: #A2E8DD;
+    color: #66FCF1;
     opacity: 87%;
-  }
-
-  .image__filter {
-    display: inline-block;
-    background-color: rgb(162, 232, 221, 0.2);
-    transition: 0.2s ease;
-    font-size: 0;
-  }
-
-  .image__filter:hover {
-    transition: 0.2s ease;
-    background-color: rgb(162, 232, 221, 0);
-  }
-
-  .project-image, .contact-image {
-    position: relative;
-    z-index: -1;
-    opacity: 1;
-  }
-
-  .project-image:hover, .contact-image:hover {
-    position: inherit;
   }
 
   .project-content {
     opacity: 87%;
+    color: #a5b8d4;
   }
 
   .project-link {
     opacity: 87%;
-    color: #a2e8dd;
+    color: #66FCF1;
+  }
+
+  section#contact {
+    /* background-color: #0C1C35; */
+    z-index: -1;
+  }
+
+  .container__contact {
+    z-index: 1;
   }
 
   .contact-left {
@@ -1250,17 +1286,123 @@ section#footer {
 
   .contact-email {
     opacity: 87%;
+    color: #a5b8d4;
   }
 
   .contact-content {
     opacity: 87%;
+    color: #a5b8d4;
   }
 
   .contact-border {
-    border-color: #A2E8DD;
+    border-color: #66FCF1;
   }
   
   .contact-icon {
-    filter: invert(93%) sepia(19%) saturate(588%) hue-rotate(103deg) brightness(97%) contrast(87%);
+    filter: invert(86%) sepia(45%) saturate(511%) hue-rotate(105deg) brightness(103%) contrast(98%);
+    opacity: 87%;
+    transition: 0.2s ease;
+  }
+
+  .contact-icon:hover {
+    opacity: 100%;
+    transition: 0.2s ease;
+  }
+
+  .contact-right {
+    z-index: 1;
   }
 }
+
+/* @media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    color: #1D242B;
+  }
+
+  nav {
+    opacity: 100;
+  }
+
+  .nav-left {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(50deg) brightness(99%) contrast(106%);
+  }
+
+  .nav-link a {
+    color: #1D242B;
+  }
+
+  .hero-subheader {
+    color: #a5b8d4;
+    color: rgba(29, 36, 43, .80);
+  }
+
+  .hero-link {
+    color: #1D242B;
+    border-color: #1d242b;
+  }
+
+  .hero-link:hover {
+    color: #fafafa;
+    background-color: #1d242b;
+  }
+
+  .hero-icon {
+    opacity: 87%;
+    transition: 0.2s ease;
+  }
+
+  .hero-icon:hover {
+    opacity: 100%;
+    transition: 0.2s ease;
+  }
+
+  section#about {
+    background-color: #C7EEFF;
+    background-image: url(/img/pizza-smoler.svg), url(/img/pizza-smol.svg);
+  }
+
+  .about-card {
+    background-color: #fff;
+    --box-shadow-color: #0077C0;
+  }
+
+  .about-card:hover {
+    transform: translate(5px, -5px);
+    --box-shadow-color: #0077C0;
+  }
+
+  .image__filter {
+    background-color: none;
+  }
+
+  .image__filter:hover {
+    background-color: none;
+  }
+
+  .contact-left {
+    background-color: #0077C0;
+  }
+
+  .contact-header {
+    color: #fafafa;
+  }
+
+  .contact-email {
+    opacity: 87%;
+    color: #fafafa;
+  }
+
+  .contact-content {
+    opacity: 87%;
+    color: #fafafa;
+  }
+
+  .contact-border {
+    border-color: #fafafa;
+  }
+
+  .contact-icon img {
+    filter: invert(93%);
+  }
+} */
