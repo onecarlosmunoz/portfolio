@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'onecarlosmunoz-v1';
+const CACHE_NAME = 'onecarlosmunoz-v2';
 
 const FILES_TO_CACHE = [
   '/',
@@ -15,6 +15,7 @@ const FILES_TO_CACHE = [
   '/img/pizza-smoler-dark.svg',
   '/img/pizza-smoler.svg',
   '/img/portrait.jpg',
+  '/img/logo.svg',
   '/index.html',
   '/style/style.css',
   '/js/main.js',
