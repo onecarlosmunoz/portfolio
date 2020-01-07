@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'onecarlosmunoz-v2';
+const CACHE_NAME = 'onecarlosmunoz-v4';
 
 const FILES_TO_CACHE = [
   '/',
@@ -27,6 +27,18 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll(FILES_TO_CACHE);
+    })
+  );
+});
+
+self.addEventListener('activate', function (event) {
+  event.waitUntil(
+    caches.keys().then(function (keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if(key !== CACHE_NAME && key !== 'dynamic') {
+          return caches.delete(key);
+        }
+      }));
     })
   );
 });

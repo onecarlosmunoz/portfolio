@@ -18,6 +18,11 @@
   <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
+  <div class="loader">
+    <div class="loader-elements">
+      <img class="loader-icon" src="/img/logotransparent.svg" alt="onecarlosmunoz">
+    </div>
+  </div>
   <section id="hero">
     <div class="container container__nav">
       <nav>
@@ -49,28 +54,28 @@
 
   <section id="about">
     <div class="container container__about">
-      <div class="about-card">
-        <div class="about-card_header">a bit about me</div>
-        <div class="about-card_text">I’m a Manila-based developer who loves exploring the intersection
+      <div class="about-card hidden">
+        <div class="about-card_header hidden">a bit about me</div>
+        <div class="about-card_text hidden">I’m a Manila-based developer who loves exploring the intersection
         of code & design. I also like minimal design and pizza! Currently looking for freelance work as well as a full-time Web Developer gig.</div>
-        <div class="about-card_text about-card_text__download">Download resume</div>
+        <div class="about-card_text about-card_text__download hidden">Download resume</div>
       </div>
-      <div class="about-skills">
-        <div class="about-skills_header">the sum:</div>
+      <div class="about-skills hidden">
+        <div class="about-skills_header hidden">the sum:</div>
         <div class="about-skills_grid">
-          <div class="griditem">
+          <div class="griditem hidden">
             <div class="griditem-header">Front-end:</div>
             <div class="griditem-content">HTML5, CSS3, SCSS, Vanilla JavaScript, Typescript, and Vue</div>
           </div>
-          <div class="griditem">
+          <div class="griditem hidden">
             <div class="griditem-header">Back-end:</div>
             <div class="griditem-content">PHP, Node.js, Express.js, MySQL, and MongoDB</div>
           </div>
-          <div class="griditem">
+          <div class="griditem hidden">
             <div class="griditem-header">Toolkit:</div>
             <div class="griditem-content">VSCode, Git, Gulp, Parcel, Webpack, and Figma</div>
           </div>
-          <div class="griditem">
+          <div class="griditem hidden">
             <div class="griditem-header">Other:</div>
             <div class="griditem-content">C# (Unity, .NET), Dart (Flutter), and... Table Tennis</div>
           </div>
@@ -80,41 +85,48 @@
   </section> 
 
   <section id="projects">
-    <div class="container container__projects">
-      <div class="break-header">Highlighting my best projects...</div>
-      <div class="break-subheader">Check out my GitHub repo for more projects</div>
+    <div class="container container__projects hidden">
+      <div class="break-header hidden">Highlighting my best projects...</div>
+      <div class="break-subheader hidden">Check out my GitHub repo for more projects</div>
       <div class="projects-grid">
         <div class="project">
-          <div class="image__filter">
+          <div class="image__filter hidden">
             <img class="project-image" src="img/eevoto.png" alt="Eevoto">
           </div>
-          <div class="project-header">Eevoto</div>
-          <div class="project-content">A site that allows users to create polls and easily share it with anyone. Made entirely on PHP.</div>
-          <div class="project-links">
-            <div class="project-link">View Source</div>
-            <div class="project-link">View Live</div>
+          <div class="hidden">
+            <div class="project-header">Eevoto</div>
+            <div class="project-content">A site that allows users to create polls and easily share it with anyone. Made entirely on
+              PHP.</div>
+            <div class="project-links">
+              <div class="project-link">View Source</div>
+              <div class="project-link">View Live</div>
+            </div>
           </div>
         </div>
         <div class="project">
-          <div class="image__filter">
+          <div class="image__filter hidden">
             <img class="project-image" src="img/barker.png" alt="Barker">
           </div>
-          <div class="project-header">Barker</div>
-          <div class="project-content">Totally not a Twitter clone. Made with Vue.js, powered by REST APIs.</div>
-          <div class="project-links">
-            <div class="project-link">View Source</div>
-            <div class="project-link">View Live</div>
+          <div class="hidden">
+            <div class="project-header">Barker</div>
+            <div class="project-content">Totally not a Twitter clone. Made with Vue.js, powered by REST APIs.</div>
+            <div class="project-links">
+              <div class="project-link">View Source</div>
+              <div class="project-link">View Live</div>
+            </div>
           </div>
         </div>
         <div class="project">
           <div class="image__filter">
-            <img class="project-image" src="img/onemvc.png" alt="OneMVC">
+            <img class="project-image hidden" src="img/onemvc.png" alt="OneMVC">
           </div>
-          <div class="project-header">OneMVC</div>
-          <div class="project-content">A PHP framework for making web apps with the MVC pattern.</div>
-          <div class="project-links">
-            <div class="project-link">View Source</div>
-            <div class="project-link">View Live</div>
+          <div class="hidden">
+            <div class="project-header hidden">OneMVC</div>
+            <div class="project-content hidden">A PHP framework for making web apps with the MVC pattern.</div>
+            <div class="project-links hidden">
+              <div class="project-link">View Source</div>
+              <div class="project-link">View Live</div>
+            </div>
           </div>
         </div>
       </div>
@@ -123,7 +135,7 @@
 
   <section id="contact">
     <div class="container container__contact">
-      <div class="contact-left">
+      <div class="contact-left hidden">
         <div class="contact-header">say hi!</div>
         <a href="mailto:onecarlosmunoz@gmail.com" class="contact-email">onecarlosmunoz@<br>gmail.com</a>
         <div class="contact-border"></div>
@@ -136,7 +148,7 @@
           <a href="https://www.linkedin.com/in/munozjuancarlos/"><img class="contact-icon" src="/img/linkedin.svg" alt="LinkedIn"></a>
         </div>
       </div>
-      <div class="image__filter">
+      <div class="image__filter hidden">
         <img class="contact-image" src="/img/portrait.jpg" alt="Juan Carlos T. Muñoz">
       </div>
     </div>
