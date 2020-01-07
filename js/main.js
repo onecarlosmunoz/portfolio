@@ -1,7 +1,7 @@
 document.body.classList.add('preloader');
 document.documentElement.classList.add('prevent-scroll');
 window.addEventListener("load", showPage);
-document.querySelector('.hero-icons').addEventListener('animationend', observe);
+document.querySelector('.hero-subheader').addEventListener('animationend', observe);
 
 window.onload = () => {
   'use strict';
