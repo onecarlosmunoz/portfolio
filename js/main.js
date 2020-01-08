@@ -1,7 +1,7 @@
 document.body.classList.add('preloader');
 document.documentElement.classList.add('prevent-scroll');
 window.addEventListener("load", showPage);
-document.querySelector('.hero-subheader').addEventListener('animationend', observe);
+document.querySelector('.hero-subheader').addEventListener('animationend', addObserver);
 
 window.onload = () => {
   'use strict';
@@ -18,30 +18,25 @@ function showPage() {
   document.querySelector('.loader').classList.add('loader__finished');
 }
 
-function observe() {
-  var elements;
-  var windowHeight;
+function addObserver() {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.25 // 25% visible
+  };
 
-  function init() {
-    elements = document.querySelectorAll('.hidden');
-    windowHeight = window.innerHeight;
-  }
-
-  function checkPosition() {
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      var positionFromTop = elements[i].getBoundingClientRect().top;
-
-      if (positionFromTop - windowHeight <= 0) {
-        element.classList.add('fade-in-element');
-        element.classList.remove('hidden');
+  const targets = document.querySelectorAll(".hidden");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add("fade-in-element");
+        // entry.target.classList.remove(".hidden");
+        observer.unobserve(entry.target);
       }
-    }
-  }
+    }, options)
+  });
 
-  window.addEventListener('scroll', checkPosition);
-  window.addEventListener('resize', init);
-
-  init();
-  checkPosition();
+  targets.forEach(target => {
+    observer.observe(target);
+  });
 }

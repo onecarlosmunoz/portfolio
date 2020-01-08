@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'onecarlosmunoz-v6';
+const CACHE_NAME = 'onecarlosmunoz-v7';
 
 const FILES_TO_CACHE = [
   '/',
